@@ -21,7 +21,20 @@
 10. Looking at the Routing Table => 'bin/rake routes'
 11. Creating the Articles Controller => 'bin/rails generate controller articles' (app/controllers/articles_controller.rb)
 12. Defining the Index Action (app/controllers/articles_controller.rb)
-13. Creating the Index Template (app/views/articles/index.html.erb)
+13. Creating the Index View (app/views/articles/index.html.erb)
 14. Adding Navigation to the Index
 15. Defining the Show Action (app/controllers/articles_controller.rb)
-16. Creating the Show Template (app/views/articles/show.html.erb)
+16. Creating the Show View (app/views/articles/show.html.erb)
+17. Styling (app/assets/stylesheets/screen.css)
+18. Defining the New Action (app/controllers/articles_controller.rb)
+19. Creating the New View (app/views/articles/new.html.erb)
+20. Defining the Create Action to process user response from form in New View (app/controllers/articles_controller.rb)
+21. Defining article_params helper method to use Strong Parameters. (app/helpers/articles_helper.rb)
+22. Including ArticlesHelper to controller class and using our helper method as a parameter inside new.
+23. Defining the Edit Action (app/controllers/articles_controller.rb)
+24. Creating the Edit View (app/views/articles/edit.html.erb)
+25. Creating a Form Partial (_form.html.erb) for new.html.erb and edit.html.erb
+26. Defining Update Action (app/controllers/articles_controller.rb)
+27. Adding Flash (app/controllers/articles_controller.rb)
+28. Adding Flash to the Layout (app/views/layouts/application.html.erb)
+29. Configurating root to show articles index page (config/routes.rb)
