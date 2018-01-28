@@ -38,3 +38,28 @@
 27. Adding Flash (app/controllers/articles_controller.rb)
 28. Adding Flash to the Layout (app/views/layouts/application.html.erb)
 29. Configurating root to show articles index page (config/routes.rb)
+30. Creating the Comment Model => 'bin/rails generate model Comment author_name:string body:text article:references'
+31. Saving the Migration => 'bin/rake db:migrate'
+32. Setting up the one to many connection between article and comment models (app/models/article.rb, app/models/comment.rb)
+33. Testing in rails console => 'bin/rails console'
+
+  a = Article.first
+  a.comments
+  Comment.new
+  a.comments.new
+  a.comments
+  
+  c = a.comments.new
+  c.author_name = "Daffy Duck"
+  c.body = "I think this article is thhh-thhh-thupid!"
+  c.save
+  d = a.comments.create(author_name: "Chewbacca", body: "RAWR!")
+  
+  a.reload
+  a.comments
+34. Displaying Comments for an Article (app/views/articles/show.html.erb)
+35. Creating partial _comment.html.erb for randering comments (app/views/articles/_comment.html.erb)
+36. Creating a Comment Form Partial (app/views/comments/_form.html.erb, app/views/articles/show.html.erb)
+37. Configurating routes to specify comments as a sub-resource (config/routes.rb)
+38. Generating Comments Controller 'bin/rails generate controller comments'
+39. Defining Create Action with comment_params method for Comments Controller (app/controllers/comments_controller.rb)
