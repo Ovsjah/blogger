@@ -63,3 +63,14 @@
 37. Configurating routes to specify comments as a sub-resource (config/routes.rb)
 38. Generating Comments Controller 'bin/rails generate controller comments'
 39. Defining Create Action with comment_params method for Comments Controller (app/controllers/comments_controller.rb)
+40. Tagging => 'bin/rails generate model Tag name:string', 'bin/rails generate model Tagging tag:references article:references'
+41. Saving Migration 'bin/rake db:migrate'
+42. Expressing Relationships (app/models/article.rb, app/models/tag.rb)
+43. An Interface for Tagging Articles (app/views/articles/_form.html.erb)
+44. Defining tag_list method in Article model (app/models/article.rb)
+45. Overriding to_s method in Tag model (app/models/article.rb)
+46. Defining tag_list setter method in Article model (app/models/article.rb)
+47. Generating Tags Controller => 'bin/rails generate controller tags'
+48. Setting routes for tags (config/routes.rb)
+49. Defining Show Action (app/controllers/tags_controller.rb)
+50. Creating Show View (app/views/tags/show.html.erb)

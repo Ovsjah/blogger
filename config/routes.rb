@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :articles do  # RESTful model of web interaction with articles
     resources :comments
   end
+  
+  resources :tags
 end
