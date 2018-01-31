@@ -19,6 +19,12 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.save
+
+    if params[:images]
+      params[:images].each do |image|
+        @article.attachments.create(image: image)
+      end
+    end
     
     flash.notice = "Article '#{@article.title}' Created!"
     

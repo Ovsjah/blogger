@@ -74,3 +74,10 @@
 48. Setting routes for tags (config/routes.rb)
 49. Defining Show Action (app/controllers/tags_controller.rb)
 50. Creating Show View (app/views/tags/show.html.erb)
+51. Setting up the Database for Paperclip => 'bin/rails generate migration add_paperclip_fields_to_article'
+52. Add columns to Articles table (db/migrate/20180130101826_add_paperclip_fields_to_article.rb)
+53. Save migration => 'bin/rake db:migrate'
+57. Adding Paperclip's 'has_attached_file' method  to the Article Model (app/models/article.rb)
+58. Modify app/helpers/articles_helper.rb => permit(..., :image)
+59. Modify the Form Template (app/views/articles/_form.html.erb)
+60. Modify the Show Template to render image (app/view/articles/show.html.erb)

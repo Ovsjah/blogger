@@ -12,6 +12,14 @@
 </p>
 
 <p>
+  <% @article.attachments.each do |attachment| %>
+    <% if attachment.image.exists? %>
+      <%= image_tag attachment.image.url(:medium) %>
+    <% end %>
+  <% end %>
+</p>
+
+<p>
   <%= @article.body %>
 </p>
 
