@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
   
+  before_action :require_login, only: [:new, :create, :edit, :update, :destroy]
+  
   def index
     @articles = Article.all
     @tags = Tag.all
@@ -18,13 +20,10 @@ class ArticlesController < ApplicationController
   
   def create
     @article = Article.new(article_params)
+    
     @article.save
-
-    if params[:images]
-      params[:images].each do |image|
-        @article.attachments.create(image: image)
-      end
-    end
+    
+    @article.images = params[:article][:images]
     
     flash.notice = "Article '#{@article.title}' Created!"
     

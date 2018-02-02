@@ -1,11 +1,17 @@
 class Article < ApplicationRecord
+
+  attr_accessor :images
+  
   has_many :comments
   has_many :taggings
   has_many :tags, through: :taggings, dependent: :destroy
   has_many :attachments, dependent: :destroy
   
-  #has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }
-  #validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
+  def images=(files)
+    files.each do |file|
+      attachments.create(image: file)
+    end
+  end
   
   def tag_list
     tags.join(", ")

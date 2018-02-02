@@ -81,3 +81,20 @@
 58. Modify app/helpers/articles_helper.rb => permit(..., :image)
 59. Modify the Form Template (app/views/articles/_form.html.erb)
 60. Modify the Show Template to render image (app/view/articles/show.html.erb)
+61. Multiple files upload with nested resource using Paperclip in Rails.
+62. Authentication with Sorcery => 'bin/rails generate sorcery:install --model=Author'
+63. Adding username to migration file (db/migrate/*_sorcery_core.rb)
+64. Saving the migration => 'bin/rake db:migrate'
+65. CRUD for our Author Model using rails scaffold_controller generator => 'bin/rails generate scaffold_controller Author username:string email:string password:password password_confirmation:password'
+67. Improving authors/_form.html.erb
+68. Improving Author Model by adding password matching confirmation => (app/models/author.rb)
+69. Improving authors/index.html.erb
+70. Adding authors resources (config/routes.rb)
+71. Improving application layout to display login status (app/views/layouts/application.html.erb)
+72. Generatin AuthorSessions controller for Logging in => 'bin/rails generate controller AuthorSessions
+73. Adding new, create, destroy actions to app/controllers/author_sessions_controller.rb
+74. Creating New View => (app/views/author_sessions/new.html.erb)
+75. Editing routes to handle our logging in => (config/routes.rb)
+78. Securing New Users (app/controllers/authors_controller.rb)
+79. Securing the rest of app (app/controllers/authors_controller.rb,tags_controller.rb, comments_controller.rb, articles_controller.rb)
+80. Hiding links from unauthenticated users (app/views/articles/show.html.erb)
